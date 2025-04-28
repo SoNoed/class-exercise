@@ -8,10 +8,14 @@
     <script>
       function changeLeft() {
         console.log("changeLeft");
+        document.getElementById("header").style.textAlign = "left";
+
       }
 
       function changeRight() {
         console.log("changeRight");
+        document.getElementById("header").style.textAlign = "right";
+
       }
     </script>
     <!-- חלק ב' - העברת טקסט מתיבה לכפתור -->
@@ -23,7 +27,19 @@
   </head>
   <body>
     <div id="container">
-      <div id="first"><!-- חלק א' - כפתורי רדיו לשינוי כיוון הכותרת  --></div>
+      <div id="first">
+        <h1 id="header">ברוכים הבאים</h1>
+          <input type="radio" name="lor" checked onclick="changeLeft()">
+          <label for="left">שמאל</label><br>
+          <br>
+          <input type="radio" name="lor" onclick="changeRight()">
+          <label for="right">ימין</label><br>
+          <br>
+
+
+
+
+      </div>
       <div id="second"><!-- חלק ב' - העברת טקסט מתיבה לכפתור  --></div>
     </div>
   </body>
